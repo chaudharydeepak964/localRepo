@@ -7,4 +7,8 @@ df=pd.read_csv(r'F:\GIThUB\GitDemo\My-First-GitHub-Repo\LocalRepo\RAW\U_Full_Lin
 print(df)
 
 df=df[['Site A Name','Site Z Name']]
-print(df)
+df=df.dropna(subset=['Site Z Name'])
+Test=df[df['Site A Name']=='IDJK100156_JMMU_H_C_I211']
+print(Test)
+Test1=df[df['Site A Name'].isin(['IDJK100156_JMMU_H_C_I211','INUE170101_PARA_I_C_I2C1'])]
+print(Test1)
